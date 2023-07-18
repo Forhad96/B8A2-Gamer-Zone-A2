@@ -88,6 +88,8 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
 }
 .nav__icon {
   display: flex;
@@ -136,3 +138,32 @@ nav {
 
 
 /* style rule for nav */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* style rule for media query */
+@media screen and (width < 36rem) {
+
+    /* media style for header */
+    header{
+        box-shadow: none;
+    }
+    .nav__menu{
+        flex-direction: column;
+        /* background-color: #0b0223; */
+    }
+}
