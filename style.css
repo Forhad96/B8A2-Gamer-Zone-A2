@@ -1,0 +1,138 @@
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700;800&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Work Sans", sans-serif;
+  text-decoration: none;
+  list-style: none;
+}
+body {
+  width: 100%;
+}
+img {
+  max-width: 100%;
+  object-fit: cover;
+}
+:root {
+  /* font size */
+
+  /* 18,20,24,32,48,95 */
+
+  --font-extra-small: 1.125rem;
+  --font-small: 1.25rem;
+  --font-extra-medium: 1.5rem;
+  --font-medium: 2rem;
+  --font-extra-large: 48px;
+  --font-large: 5.9375rem;
+
+  /* font weight */
+
+  /* 500,700,600,800,400, */
+
+  --fw-400: 400;
+  --fw-500: 500;
+  --fw-600: 600;
+  --fw-700: 700;
+  --fw-800: 700;
+
+  /* line height */
+
+  --lh-20: 20px;
+  --lh-24: 24px;
+  --lh-28: 28px;
+  --lh-36: 36px;
+  --lh-70: 70px;
+
+  /* font color */
+
+  --color-primary: #0b0223;
+  --color-gray-100: #3c354f;
+  --color-gray-50: #534c64;
+  --color-blue: #0b0223;
+  --color-sky: #4ec5f7;
+  --color-pink: #e02c6d;
+  --color-white: #fff;
+  --color-white-gray: rgba(255, 255, 255, 0.6);
+  --linear-90deg: (90deg, #ff42a5 0%, #ff42a5 100%);
+  --linear-180deg: (180deg, #f948b2 0%, #8758f1 100%);
+}
+
+/* style rule  for common style*/
+.container {
+  max-width: 90%;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.button {
+  padding: 1.3125rem 2.5rem;
+  background: var(--color-pink);
+  color: var(--color-white);
+  font-size: var(--font-small);
+  font-weight: var(--fw-600);
+  border: none;
+  border-radius: 3rem;
+}
+
+/* style rule for header */
+header {
+  background: #fff;
+  box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.05);
+  padding: 10px 0;
+}
+/* style rule for nav */
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.nav__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.25rem;
+}
+.nav__icon--img {
+  width: 5.3125rem;
+  height: 2.5rem;
+}
+.nav__icon--title {
+  font-size: var(--font-extra-large);
+  font-weight: var(--fw-700);
+}
+.nav__menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.nav__menu--item {
+  color: var(--color-gray-100);
+  font-size: var(--font-small);
+  font-weight: var(--fw-500);
+}
+.nav__item-follow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  border-radius: 8px;
+  background: rgba(11, 2, 35, 0.1);
+  padding: 1.0625rem 1.5rem;
+}
+.nav__item-follow-text{
+    color: var(--color-gray-100);
+    font-size: var(--font-extra-small);
+    font-weight: var(--fw-500);
+}
+
+.nav__item--follow-icon img{
+    margin-right: 16px;
+}
+
+
+/* style rule for nav */
