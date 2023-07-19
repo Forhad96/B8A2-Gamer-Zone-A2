@@ -8,6 +8,9 @@
   text-decoration: none;
   list-style: none;
 }
+.hide {
+  display: none;
+}
 body {
   width: 100%;
 }
@@ -55,7 +58,7 @@ img {
 .container {
   max-width: 90%;
   margin: 0 auto;
-  padding: 0 40px;
+  padding: 0 60px;
 }
 .text-center {
   text-align: center;
@@ -163,19 +166,17 @@ nav {
 
 /* style rule for sectionOne */
 
-.section__banner--wrapper {
+.sectionOne__banner--wrapper {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 16px;
 }
-
-.sectionOne__banner--content {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
+.sectionOne__banner--content{
+  background: url("images/bannerbg.png");
+  background-size: contain;
+  
 }
-
 .sectionOne__banner--title {
   color: var(--color-primary);
   font-size: var(--font-extra-large);
@@ -190,7 +191,7 @@ nav {
 }
 
 .sectionOne__banner--icon-text {
-  margin-bottom: 1.0625rem;
+  margin-bottom: 0.75rem;
   display: flex;
   align-items: flex-start;
   gap: 10px;
@@ -198,8 +199,10 @@ nav {
 .sectionOne__banner--btn-wrapper {
   margin-top: 2.5rem;
   display: flex;
-  gap: 1.5rem;
+  align-items: flex-start;
+  gap: 16px;
 }
+
 
 /* style rule for sectionThree */
 
@@ -212,22 +215,14 @@ nav {
 }
 
 .sectionThree__onlineGames--card-wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  place-content: center;
+  margin-top: 2.25rem;
+  display: grid;
+  grid-template-columns: repeat(4,1fr); 
   gap: 1.5rem;
+  align-items: center;
 }
 
-.sectionThree__onlineGames--card {
-  width: 342px;
-  height: 400px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 24px;
-  margin-top: 3rem;
-}
+/* .sectionThree__onlineGames--card {} */
 /* .sectionThree__onlineGames--card-img-wrapper{} */
 
 .sectionThree__onlineGames--card-imgWrapper {
@@ -258,65 +253,74 @@ nav {
 .sectionFour {
   display: flex;
   align-items: center;
-  justify-content: center;
   margin-top: 7.5rem;
   gap: 270px;
+
 }
 
 .sectionFour__content--wrapper {
   text-align: right;
 }
-
-.sectionFour__image--wrapper {
+.sectionFour__image--wrapper{
   position: relative;
+
 }
+
 /* .sectionFour__image--1{} */
+
 .sectionFour__image--2 {
   position: absolute;
   top: 250px;
   right: 300px;
+  width: 60%;
 }
 
 /* style rule for section section */
-
-.sectionSeven {
-  margin-top: 12.5rem;
+.sectionSeven{
+  margin-top: 10rem;
   background: linear-gradient(90deg, rgba(255, 66, 165, 0.03) 0%, rgba(255, 66, 165, 0.03) 100%);
-  padding: 8.75rem;
-
+  padding: 60px 0;
 }
 
 .sectionSeven__games-wrapper{
-display: flex;
-align-items: center;
-justify-content: center;
-flex-wrap: wrap;
-gap: 2.5rem;
-transition: border 0.3s linear ease-in-out;
-
-}
-
-.sectionSeven__games {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   align-items: center;
-  gap: 10px;
-  color: var(--color-primary);
-padding: 10px 20px;
-
-  
-}
+  gap:2cqw;
+ }
+ .sectionSeven__games {
+   border-radius: 3.125rem;
+   background: #fff;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   padding: 0 1cqw;
+ }
+ .sectionSeven__games h4{
+   font-size: 1cqw;
+   color: var(--color-primary);
+ }
+ .sectionSeven__games img{
+   width: 4cqw;
+   margin-right: 1cqw;
+ }
+ 
 .sectionSeven__games:hover{
-outline: 2px solid #e02c6d;
-border-radius: 50px;
-background: var(--color-pink);
-color: var(--color-white);
+  border-radius: 48px;
+  background-color: var(--color-white);
+  outline: 2px solid #e02c6d;
 }
+
+
+
+
 /* style rule for footer */
 
 footer {
   background-color: var(--color-primary);
   text-align: center;
-  padding: 80px 0;
+  padding: 40px 0;
 }
 
 .footer__header {
@@ -332,8 +336,8 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 3.75rem;
-  margin-top: 3.125rem;
+  gap: 2rem;
+  margin-top: 2.5rem;
   flex-wrap: wrap;
 }
 .footer__menu--item a {
@@ -345,20 +349,41 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 40px;
+  gap: 30px;
   flex-wrap: wrap;
-  margin-bottom: 3.75rem;
-  margin-top: 3.75rem;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
 }
 .foot__copy,
 .footer__terms--text {
   font-weight: var(--fw-500);
   color: var(--color-white-gray);
-  margin-bottom: 1.75rem;
+  margin-bottom: 1rem;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* style rule for media query */
-@media screen and (width < 36rem) {
+@media screen and (width < 700px) {
   /* media style for header */
   header {
     box-shadow: none;
@@ -367,38 +392,103 @@ footer {
   .nav__menu {
     flex-direction: column;
   }
-
-  .section__banner--wrapper {
+  /* media style for section one */
+  .sectionOne__banner--wrapper {
     flex-direction: column-reverse;
   }
+  .sectionOne__banner--content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  /* media style for section Three */
 
   .sectionThree__onlineGames--card-wrapper {
-    flex-wrap: wrap;
+  grid-template-columns: repeat(1,1fr);
+  gap: 5rem;
+    
   }
 
   /* media style for section four */
 
   .sectionFour {
-    gap: 70px;
+    gap: 50px;
   }
   .sectionFour__content--wrapper {
     text-align: center;
   }
-  .sectionFour__image--2 {
-    top: 175px;
-    right: 200px;
-    width: 150px;
+
+  .sectionFour__content--title{
+    font-size: 2rem;
   }
-
-
+  .sectionFour__image--2 {
+    top: 150px;
+    right: 160px;
+    width: 60%;
+  }
 
   /* media style for section Seven */
-  .sectionSeven__games-wrapper{
+
+  .sectionSeven__games-wrapper {
+    /* flex-basis: calc(33.33% - 2 * 1cqw); */
     display: grid;
     grid-template-columns: repeat(3,1fr);
-
   }
+  .sectionSeven__games h4{
+    font-size: 1.8cqw;
+  }
+  .sectionSeven__games img{
+    width: 7cqw;
+    margin-right: 1cqw;
+  }
+
+
+  /* media style for footer */
+
+
 }
 
-@media screen and (min-width: 36rem) and (max-width: 992px) {
+@media screen and (min-width: 700px) and (max-width: 1020px) {
+  .section__banner--wrapper {
+    gap: 3rem;
+    padding-top: 1.25rem;
+  }
+  .sectionOne__banner--title {
+    font-size: 2rem;
+  }
+
+
+  .sectionOne__banner--btn-wrapper {
+    flex-direction: column;
+    margin-top: 1.5rem;
+  }
+  .button {
+    padding: 10px 15px;
+  }
+
+
+
+    /* media style for section Three */
+
+    .sectionThree__onlineGames--card-wrapper {
+      grid-template-columns: repeat(2,1fr);
+      gap: 5rem;
+        
+      }
+
+      /* style rule for section four */
+      .sectionFour {
+        gap: 50px;
+      }
+      .sectionFour__content--wrapper {
+        text-align: left;
+      }
+      .sectionFour__content--title{
+        font-size: 2rem;
+      }
+      .sectionFour__image--2 {
+        top: 100px;
+        right: 150px;
+        width: 60%;
+      }
 }
