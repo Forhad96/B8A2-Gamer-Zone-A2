@@ -191,8 +191,10 @@ nav {
 
 .sectionOne__banner--icon-text {
   margin-bottom: 1.0625rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
 }
-
 .sectionOne__banner--btn-wrapper {
   margin-top: 2.5rem;
   display: flex;
@@ -290,6 +292,7 @@ align-items: center;
 justify-content: center;
 flex-wrap: wrap;
 gap: 2.5rem;
+transition: border 0.3s linear ease-in-out;
 
 }
 
@@ -298,8 +301,16 @@ gap: 2.5rem;
   align-items: center;
   gap: 10px;
   color: var(--color-primary);
-}
+padding: 10px 20px;
 
+  
+}
+.sectionSeven__games:hover{
+outline: 2px solid #e02c6d;
+border-radius: 50px;
+background: var(--color-pink);
+color: var(--color-white);
+}
 /* style rule for footer */
 
 footer {
