@@ -54,7 +54,7 @@ img {
 
 /* style rule  for common style*/
 .container {
-  max-width: 95%;
+  max-width: 90%;
   margin: 0 auto;
   padding: 0 40px;
 }
@@ -126,7 +126,7 @@ nav {
   height: 2.5rem;
 }
 .nav__icon--title {
-  font-size: var(--font-extra-large);
+  font-size: clamp(1.5rem,7vw,3rem);
   font-weight: var(--fw-700);
 }
 .nav__menu {
@@ -183,8 +183,8 @@ nav {
 }
 
 .sectionOne__banner--title-color {
-  /* font-size: clamp(3rem,6vw,5.9375rem); */
-  font-size: var(--font-large);
+  font-size: clamp(3.8rem,6vw,5.9375rem);
+  /* font-size: var(--font-large); */
   font-weight: var(--fw-800);
   margin-bottom: 1.5rem;
 }
@@ -211,6 +211,7 @@ nav {
 
 .sectionThree__onlineGames--title {
   margin-bottom: 1rem;
+  font-size: clamp(2rem,6vw,3rem);
 }
 
 .sectionThree__onlineGames--card-wrapper {
@@ -377,14 +378,14 @@ footer {
 }
 .footer__menu--item a {
   color: var(--color-white);
-  font-size: var(--font-extra-small);
+  font-size: clamp(10px,6vw,1rem);
   font-weight: var(--fw-600);
 }
 .footer__social {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 30px;
+  gap: 20px;
   flex-wrap: wrap;
   margin-bottom: 2rem;
   margin-top: 2rem;
@@ -438,6 +439,9 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: center;
+  }
+  .button{
+    padding: 8px 15px;
   }
   /* media style for section Three */
 
