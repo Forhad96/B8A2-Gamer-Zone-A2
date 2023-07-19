@@ -65,6 +65,9 @@ img {
   margin: 0 auto;
   padding: 0 40px;
 }
+.text-center {
+  text-align: center;
+}
 
 .button {
   padding: 1.3125rem 2.5rem;
@@ -75,16 +78,30 @@ img {
   border: none;
   border-radius: 3rem;
 }
-
-.btn-sky{
+.tex-white{
+  color: var(--color-white);
+}
+.btn-sky {
   background: var(--color-sky) !important;
 }
-.linear-text{
-  background: linear-gradient(180deg, #F948B2 0%, #8758F1 100%);
-background-clip: text;
--webkit-background-clip: text;
--webkit-text-fill-color: transparent;
+.linear-text {
+  background: linear-gradient(180deg, #f948b2 0%, #8758f1 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
+.common-title {
+  color: var(--color-primary);
+  font-size: var(--font-extra-large);
+  font-weight: var(--fw-700);
+}
+
+.common-text {
+  font-size: var(--font-extra-small);
+  font-weight: var(--fw-400);
+  color: var(--color-gray-50);
+}
+
 /* style rule for header */
 header {
   background: #fff;
@@ -135,96 +152,199 @@ nav {
   background: rgba(11, 2, 35, 0.1);
   padding: 1.0625rem 1.5rem;
 }
-.nav__item-follow-text{
-    color: var(--color-gray-100);
-    font-size: var(--font-extra-small);
-    font-weight: var(--fw-500);
+.nav__item-follow-text {
+  color: var(--color-gray-100);
+  font-size: var(--font-extra-small);
+  font-weight: var(--fw-500);
 }
 
-.nav__item--follow-icon img{
-    margin-right: 16px;
+.nav__item--follow-icon img {
+  margin-right: 16px;
 }
-
 
 /* style rule for main */
 
-
-
 /* style rule for sectionOne */
 
-
-.section__banner--wrapper{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+.section__banner--wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
-.sectionOne__banner--content{
+.sectionOne__banner--content {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
 }
 
-.sectionOne__banner--title{
+.sectionOne__banner--title {
   color: var(--color-primary);
   font-size: var(--font-extra-large);
   font-weight: var(--fw-600);
   text-transform: uppercase;
 }
 
-.sectionOne__banner--title-color{
+.sectionOne__banner--title-color {
   font-size: var(--font-large);
   font-weight: var(--fw-800);
   margin-bottom: 1.5rem;
 }
 
-
-/* .sectionOne__banner--icon-text--wrapper{} */
-
-
-.sectionOne__banner--icon-text{
+.sectionOne__banner--icon-text {
   margin-bottom: 1.0625rem;
 }
 
-.sectionOne__banner--btn-wrapper{
+.sectionOne__banner--btn-wrapper {
   margin-top: 2.5rem;
   display: flex;
   gap: 1.5rem;
 }
 
-/* sectionOne__banner--btn */
+/* style rule for sectionThree */
 
+.sectionThree {
+  margin-top: 7.5rem;
+}
 
+.sectionThree__onlineGames--title {
+  margin-bottom: 1rem;
+}
 
+.sectionThree__onlineGames--card-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  place-content: center;
+  gap: 1.5rem;
+}
 
+.sectionThree__onlineGames--card {
+  width: 342px;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+  margin-top: 3rem;
+}
+/* .sectionThree__onlineGames--card-img-wrapper{} */
 
+.sectionThree__onlineGames--card-imgWrapper {
+  position: relative;
+  display: inline-block;
+}
 
+.play-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+}
 
+.sectionThree__onlineGames--card-imgWrapper:hover .play-button {
+  opacity: 1;
+}
 
+.sectionThree__onlineGames--card-text {
+  font-size: var(--font-small);
+  font-weight: var(--fw-500);
+  color: var(--color-gray-50);
+}
 
+/* style rule for sectionFour */
 
+.sectionFour {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 7.5rem;
+}
 
+.sectionFour__content--wrapper {
+  text-align: right;
+  margin-right: 16.5625rem;
+}
 
+.sectionFour__image--wrapper {
+  position: relative;
+}
+/* .sectionFour__image--1{} */
+.sectionFour__image--2 {
+  position: absolute;
+  top: 250px;
+  right: 300px;
+}
 
+/* style rule for footer */
+
+footer{
+  /* display: flex; */
+  margin-top: 240px;
+  background-color: var(--color-primary);
+  text-align: center;
+  padding: 80px 0;
+}
+
+.footer__header{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* .footer__menu{} */
+.footer__terms,
+.footer__menu--item-wrapper{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3.75rem;
+  margin-top: 3.125rem;
+
+}
+.footer__menu--item a{
+  color: var(--color-white);
+  font-size: var(--font-extra-small);
+  font-weight: var(--fw-600);
+}
+.footer__social{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  margin-bottom: 3.75rem;
+  margin-top: 3.75rem;
+}
+.foot__copy,
+.footer__terms--text{
+  font-weight: var(--fw-500);
+  color: var(--color-white-gray);
+  margin-bottom: 1.75rem;
+}
 
 
 
 /* style rule for media query */
 @media screen and (width < 36rem) {
+  /* media style for header */
+  header {
+    box-shadow: none;
+  }
+  .nav__menu {
+    flex-direction: column;
+  }
 
-    /* media style for header */
-    header{
-        box-shadow: none;
-    }
-    .nav__menu{
-        flex-direction: column;
-    }
+  .section__banner--wrapper {
+    flex-direction: column-reverse;
+  }
 
-    .section__banner--wrapper{
-      flex-direction: column-reverse;
-    }
+  .sectionThree__onlineGames--card-wrapper {
+    flex-wrap: wrap;
+  }
 }
 
-@media screen and (width < 36rem) and (width >= 992){
+@media screen and (min-width: 36rem) and (max-width: 992px) {
 }
