@@ -37,14 +37,6 @@ img {
   --fw-700: 700;
   --fw-800: 700;
 
-  /* line height */
-
-  --lh-20: 20px;
-  --lh-24: 24px;
-  --lh-28: 28px;
-  --lh-36: 36px;
-  --lh-70: 70px;
-
   /* font color */
 
   --color-primary: #0b0223;
@@ -68,7 +60,12 @@ img {
 .text-center {
   text-align: center;
 }
-
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.625rem;
+}
 .button {
   padding: 1.3125rem 2.5rem;
   background: var(--color-pink);
@@ -78,7 +75,7 @@ img {
   border: none;
   border-radius: 3rem;
 }
-.tex-white{
+.tex-white {
   color: var(--color-white);
 }
 .btn-sky {
@@ -261,11 +258,11 @@ nav {
   align-items: center;
   justify-content: center;
   margin-top: 7.5rem;
+  gap: 270px;
 }
 
 .sectionFour__content--wrapper {
   text-align: right;
-  margin-right: 16.5625rem;
 }
 
 .sectionFour__image--wrapper {
@@ -278,17 +275,40 @@ nav {
   right: 300px;
 }
 
+/* style rule for section section */
+
+.sectionSeven {
+  margin-top: 12.5rem;
+  background: linear-gradient(90deg, rgba(255, 66, 165, 0.03) 0%, rgba(255, 66, 165, 0.03) 100%);
+  padding: 8.75rem;
+
+}
+
+.sectionSeven__games-wrapper{
+display: flex;
+align-items: center;
+justify-content: center;
+flex-wrap: wrap;
+gap: 2.5rem;
+
+}
+
+.sectionSeven__games {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--color-primary);
+}
+
 /* style rule for footer */
 
-footer{
-  /* display: flex; */
-  margin-top: 240px;
+footer {
   background-color: var(--color-primary);
   text-align: center;
   padding: 80px 0;
 }
 
-.footer__header{
+.footer__header {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -297,35 +317,34 @@ footer{
 
 /* .footer__menu{} */
 .footer__terms,
-.footer__menu--item-wrapper{
+.footer__menu--item-wrapper {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 3.75rem;
   margin-top: 3.125rem;
-
+  flex-wrap: wrap;
 }
-.footer__menu--item a{
+.footer__menu--item a {
   color: var(--color-white);
   font-size: var(--font-extra-small);
   font-weight: var(--fw-600);
 }
-.footer__social{
+.footer__social {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 40px;
+  flex-wrap: wrap;
   margin-bottom: 3.75rem;
   margin-top: 3.75rem;
 }
 .foot__copy,
-.footer__terms--text{
+.footer__terms--text {
   font-weight: var(--fw-500);
   color: var(--color-white-gray);
   margin-bottom: 1.75rem;
 }
-
-
 
 /* style rule for media query */
 @media screen and (width < 36rem) {
@@ -333,6 +352,7 @@ footer{
   header {
     box-shadow: none;
   }
+  .sectionFour,
   .nav__menu {
     flex-direction: column;
   }
@@ -343,6 +363,29 @@ footer{
 
   .sectionThree__onlineGames--card-wrapper {
     flex-wrap: wrap;
+  }
+
+  /* media style for section four */
+
+  .sectionFour {
+    gap: 70px;
+  }
+  .sectionFour__content--wrapper {
+    text-align: center;
+  }
+  .sectionFour__image--2 {
+    top: 175px;
+    right: 200px;
+    width: 150px;
+  }
+
+
+
+  /* media style for section Seven */
+  .sectionSeven__games-wrapper{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+
   }
 }
 
