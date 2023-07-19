@@ -225,27 +225,63 @@ nav {
 /* .sectionThree__onlineGames--card {} */
 /* .sectionThree__onlineGames--card-img-wrapper{} */
 
-.sectionThree__onlineGames--card-imgWrapper {
+
+.sectionThree__card--img-wrapper {
   position: relative;
-  display: inline-block;
 }
 
-.play-button {
+.sectionThree__card--img-wrapper > img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.overlay {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
   opacity: 0;
+  transition: .5s ease;
+  border-radius: 16px;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
-.sectionThree__onlineGames--card-imgWrapper:hover .play-button {
+.sectionThree__card--img-wrapper:hover .overlay {
   opacity: 1;
 }
+.play-button{
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.text {
+  color: var(--color-pink);
+  font-size: 20px;
+  font-weight: var(--fw-600);
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+
 
 .sectionThree__onlineGames--card-text {
   font-size: var(--font-small);
   font-weight: var(--fw-500);
   color: var(--color-gray-50);
+  margin-top: 1rem;
 }
 
 /* style rule for sectionFour */
